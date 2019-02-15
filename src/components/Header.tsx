@@ -3,43 +3,78 @@ import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import { Link } from 'gatsby'
 
-import { heights, dimensions, colors } from '../styles/variables'
-import Container from './Container'
+import { colors } from '../styles/variables'
+import invertedLogo from '../assets/logo.inverted.png'
 
 const StyledHeader = styled.header`
-  height: ${heights.header}px;
-  padding: 0 ${dimensions.containerPadding}rem;
-  background-color: ${colors.brand};
   color: ${transparentize(0.5, colors.white)};
+  width: 100%;
 `
 
-const HeaderInner = styled(Container)`
+const Navbar = styled.nav`
+  list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 100%;
+  > * {
+    margin-left: 1em;
+    margin-right: 1em;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    border-bottom-style: none;
+  }
 `
 
-const HomepageLink = styled(Link)`
-  color: ${colors.white};
+const StyledLogo = styled(Link)`
   font-size: 1.5rem;
+  > img {
+    height: 4rem;
+    margin-top: 0.5rem; // TODO: make this better
+  }
+`
+const NavTextItem = styled(Link)`
+  color: ${colors.brand};
+  font-size: 1.3rem;
   font-weight: 600;
 
   &:hover,
   &:focus {
+    color: ${colors.white};
     text-decoration: none;
   }
 `
+const LogoEntry: React.FunctionComponent<{ icon: string; to: string }> = ({ icon, to }) => (
+  <li>
+    <StyledLogo to={to}>
+      <img src={icon} />
+    </StyledLogo>
+  </li>
+)
+const NavTextEntry: React.FunctionComponent<{ label: string; to: string }> = ({ label, to }) => (
+  <li>
+    <NavTextItem to={to}>{label}</NavTextItem>
+  </li>
+)
 
-interface HeaderProps {
-  title: string
-}
+interface HeaderProps {}
 
-const Header: React.SFC<HeaderProps> = ({ title }) => (
+const Header: React.FunctionComponent<HeaderProps> = () => (
   <StyledHeader>
-    <HeaderInner>
-      <HomepageLink to="/">{title}</HomepageLink>
-    </HeaderInner>
+    <Navbar>
+      <LogoEntry icon={invertedLogo} to="/" />
+      <NavTextEntry label="Attend" to="#attend" />
+      <NavTextEntry label="About" to="#about" />
+      <NavTextEntry label="Last Year" to="#2018" />
+      <NavTextEntry label="FAQ" to="#faq" />
+      <NavTextEntry label="Sponsors" to="#sponsors" />
+    </Navbar>
   </StyledHeader>
 )
 

@@ -31,10 +31,11 @@ export default `
   a {
     color: ${colors.brand};
     text-decoration: none;
+    border-bottom-style: dotted;
 
     &:hover,
     &:focus {
-      text-decoration: underline;
+      border-bottom-style: solid;
     }
   }
 
@@ -86,7 +87,7 @@ export default `
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.414rem;
     margin-bottom: .5rem;
-    color: ${colors.black};
+    // color: ${colors.black};
     font-weight: 600;
     line-height: ${dimensions.lineHeight.heading};
     text-rendering: optimizeLegibility;
