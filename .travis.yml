@@ -13,7 +13,7 @@ node_js:
   - '9'
 
 script:
-  - yarn build:gh-pages
+  - yarn build
 
 deploy:
   provider: pages
