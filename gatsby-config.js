@@ -2,13 +2,13 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-starter-typescript-plus',
-    description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
-    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
+    title: "un{code}ference.io '19",
+    description: 'The software engineering unconferencein the heart of Tyrol (Austria)',
+    siteUrl: 'https://uncodeference.io',
     author: {
-      name: 'Resi Respati',
-      url: 'https://twitter.com/resir014',
-      email: 'resir014@gmail.com'
+      name: 'Bernhard Mayr',
+      url: 'https://twitter.com/bemayr',
+      email: 'bernhard@mayr.io'
     }
   },
   plugins: [

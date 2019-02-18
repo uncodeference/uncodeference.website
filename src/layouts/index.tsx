@@ -35,7 +35,7 @@ const IndexLayout: React.SFC = ({ children }) => (
           title={data.site.siteMetadata.title}
           meta={[
             { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: 'gatsbyjs, gatsby, javascript, sample, something' }
+            { name: 'keywords', content: 'uncodeference, unconference, wattens, werkstätte, conference, software engineering' }
           ]}
         />
         <LayoutMain>{children}</LayoutMain>
