@@ -19,7 +19,7 @@ const MainSection = styled.div`
 
 const InfoBox = styled.div`
   color: ${colors.brand};
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: ${colors.black};
   border: 4px solid ${colors.brand};
   display: flex;
   flex-direction: column;
@@ -99,7 +99,7 @@ const MainInfo: React.FunctionComponent = () => (
     <Spacer />
     <p>
       The software engineering <a href="http://unconference.net/unconferencing-how-to-prepare-to-attend-an-unconference/">unconference</a>{' '}
-      in the heart of Tyrol, Austria
+      in the heart of Tyrol (Austria)
     </p>
     <Spacer />
     <Schedule />

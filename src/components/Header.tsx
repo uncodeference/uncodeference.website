@@ -38,6 +38,11 @@ const StyledLogo = styled(Link)`
     height: 4rem;
     margin-top: 0.5rem; // TODO: make this better
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
 `
 const NavTextItem = styled(Link)`
   color: ${colors.brand};
@@ -46,8 +51,7 @@ const NavTextItem = styled(Link)`
 
   &:hover,
   &:focus {
-    color: ${colors.white};
-    text-decoration: none;
+    opacity: 0.7;
   }
 `
 const LogoEntry: React.FunctionComponent<{ icon: string; to: string }> = ({ icon, to }) => (
