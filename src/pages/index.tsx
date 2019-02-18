@@ -32,6 +32,10 @@ const InfoBox = styled.div`
   > * {
     margin: 0;
   }
+  *::selection {
+    color: ${colors.white};
+    background-color: ${colors.brand}; // think of a better place for this
+  }
 `
 
 const Title = styled.h1`
@@ -40,10 +44,11 @@ const Title = styled.h1`
   margin-bottom: 0;
 `
 
-const Spacer = () => <StyledSpacer>&#8226;&#8226;&#8226;</StyledSpacer>
+const Spacer = ({ className }: { className?: string }) => <div className={className}>&#8226;&#8226;&#8226;</div>
 
-const StyledSpacer = styled.div`
+const StyledSpacer = styled(Spacer)`
   margin: 1em 0 !important;
+  user-select: none;
 `
 
 const StyledTicketsButton = styled.a`
@@ -52,6 +57,7 @@ const StyledTicketsButton = styled.a`
   background-color: ${colors.brand};
   color: ${colors.black};
   border-style: solid;
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -126,14 +132,14 @@ const MainInfo: React.FunctionComponent = () => (
         Wattens, AT
       </a>
     </h3>
-    <Spacer />
+    <StyledSpacer />
     <p>
       The software engineering <a href="http://unconference.net/unconferencing-how-to-prepare-to-attend-an-unconference/">unconference</a>{' '}
       in the heart of Tyrol (Austria)
     </p>
-    <Spacer />
+    <StyledSpacer />
     <StyledSchedule />
-    <Spacer />
+    <StyledSpacer />
     <TicketsButton />
   </InfoBox>
 )
