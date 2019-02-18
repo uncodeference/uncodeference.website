@@ -39,8 +39,7 @@ const StyledLogo = styled(Link)`
     margin-top: 0.5rem; // TODO: make this better
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.7;
   }
 `
@@ -49,8 +48,7 @@ const NavTextItem = styled(Link)`
   font-size: 1.3rem;
   font-weight: 600;
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.7;
   }
 `
@@ -74,10 +72,10 @@ const Header: React.FunctionComponent<HeaderProps> = () => (
     <Navbar>
       <LogoEntry icon={invertedLogo} to="/" />
       <NavTextEntry label="Attend" to="#attend" />
-      <NavTextEntry label="About" to="#about" />
-      <NavTextEntry label="Last Year" to="#2018" />
+      <NavTextEntry label="Last Year" to="#last-year" />
       <NavTextEntry label="FAQ" to="#faq" />
       <NavTextEntry label="Sponsors" to="#sponsors" />
+      <NavTextEntry label="Contact" to="#contact" />
     </Navbar>
   </StyledHeader>
 )

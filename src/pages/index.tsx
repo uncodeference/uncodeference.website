@@ -8,6 +8,11 @@ import Header from '../components/Header'
 import Container from '../components/Container'
 import { colors, fonts } from '../styles/variables'
 import { Link } from 'gatsby'
+import AttendSection from '../components/sections/AttendSection'
+import PreviousEditionsSection from '../components/sections/PreviousEditionsSection'
+import FAQSection from '../components/sections/FAQSection'
+import SponsorsSection from '../components/sections/SponsorsSection'
+import Contact from '../components/sections/Contact'
 
 const MainSection = styled.div`
   background-image: url(${background});
@@ -116,7 +121,7 @@ const StyledSchedule = styled(Schedule)`
     > span {
       margin-bottom: 0.3rem;
     }
-    *:nth-child(2) {
+    > :nth-child(2) {
       font-size: 1.3rem;
       font-weight: bolder;
     }
@@ -153,6 +158,11 @@ const IndexPage = () => (
           <MainInfo />
         </CenteredContainer>
       </MainSection>
+      <AttendSection />
+      <PreviousEditionsSection />
+      <FAQSection />
+      <SponsorsSection />
+      <Contact />
     </Page>
   </IndexLayout>
 )
