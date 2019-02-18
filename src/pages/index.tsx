@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
@@ -8,6 +7,7 @@ import background from '../assets/background.jpg'
 import Header from '../components/Header'
 import Container from '../components/Container'
 import { colors, fonts } from '../styles/variables'
+import { Link } from 'gatsby'
 
 const MainSection = styled.div`
   background-image: url(${background});
@@ -68,24 +68,54 @@ const CenteredContainer = styled(Container)`
 
 const TicketsButton = () => <StyledTicketsButton href="#TODO">Tickets</StyledTicketsButton>
 
-{
-  /* TODO: format the following as table */
-}
-const Schedule = () => (
-  <div>
-    <span>
-      Thursday 9<sup>th</sup>: un&lt;meet&gt;up
-    </span>
-    <br />
-    <span>
-      Friday 10<sup>th</sup>: un&#123;code&#125;ference
-    </span>
-    <br />
-    <span>
-      Saturday 11<sup>th</sup>: (un)hiking
-    </span>
+const Schedule = ({ className }: { className?: string }) => (
+  <div className={className}>
+    <div>
+      <span>
+        Thursday 9<sup>th</sup>
+      </span>
+      <a href="#TODO">un&lt;meet&gt;up</a>
+    </div>
+    <div>
+      <span>
+        Friday 10<sup>th</sup>
+      </span>
+      <Link to="#attend">un&#123;code&#125;ference</Link>
+    </div>
+    <div>
+      <span>
+        Saturday 11<sup>th</sup>
+      </span>
+      <Link to="#unhiking">(un)hiking</Link>
+    </div>
   </div>
 )
+
+// kept for emotionjs demo purpose
+const ListSchedule = styled(Schedule)`
+  div > span:after {
+    content: ': ';
+  }
+`
+
+const StyledSchedule = styled(Schedule)`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > span {
+      margin-bottom: 0.3rem;
+    }
+    *:nth-child(2) {
+      font-size: 1.3rem;
+      font-weight: bolder;
+    }
+  }
+`
 
 const MainInfo: React.FunctionComponent = () => (
   <InfoBox>
@@ -102,7 +132,7 @@ const MainInfo: React.FunctionComponent = () => (
       in the heart of Tyrol (Austria)
     </p>
     <Spacer />
-    <Schedule />
+    <StyledSchedule />
     <Spacer />
     <TicketsButton />
   </InfoBox>
