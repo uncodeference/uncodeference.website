@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { colors } from '../../styles/variables'
 import styled from '@emotion/styled'
-import { Section } from '../Section';
+import { Section } from '../Section'
 
 const ColoredSection = styled.div`
   background-image: linear-gradient(90deg, ${colors.brand}, hsla(173, 45%, 62%, 0.9));
@@ -66,17 +66,38 @@ const AttendSection = () => (
         </section>
         <section>
           <h3>The Venue</h3>
+          <p>
+            <a href="https://www.werkstaette-wattens.at/en" target="blank">
+              Werkstätte Wattens
+            </a>{' '}
+            is an international business and creative centre for founders, startups, movers & shakers and service providers at various
+            stages of development. They focus on technology, innovation, and the creation of regional value and sustainable growth.
+          </p>
+          <p />
+          <p>Weisstraße 9, 6112 Wattens, Austria</p>
         </section>
         <section>
           <h3>The Meetup</h3>
+          <p>
+            Follow the{' '}
+            <a href="https://github.com/uncodeference/unmeetup" target="blank">
+              link
+            </a>{' '}
+            for more info!
+          </p>
         </section>
         <section>
           <h3>The Hike</h3>
+          <p>To be announced!</p>
         </section>
         <section>
           <h3>Code of Conduct</h3>
           <p>
-          All attendees, speakers, sponsors and volunteers at our conference are required to agree with the <a href="http://confcodeofconduct.com/"><b>Conference Code of Conduct</b></a>. We expect cooperation from all participants to help ensure a safe environment for everybody.
+            All attendees, speakers, sponsors and volunteers at our conference are required to agree with the{' '}
+            <a href="http://confcodeofconduct.com/">
+              <b>Conference Code of Conduct</b>
+            </a>
+            . We expect cooperation from all participants to help ensure a safe environment for everybody.
           </p>
         </section>
       </div>
