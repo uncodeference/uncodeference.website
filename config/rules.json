@@ -1,0 +1,5 @@
+{
+  "rules": [
+      { "dest": "https://build-epammpkigb.now.sh" }
+  ]
+}
