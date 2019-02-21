@@ -77,7 +77,7 @@ const CenteredContainer = styled(Container)`
   flex-direction: column;
 `
 
-const TicketsButton = () => <StyledTicketsButton href="#TODO">Tickets</StyledTicketsButton>
+const TicketsButton = () => <StyledTicketsButton href="https://ti.to/uncodeference/2019">Tickets</StyledTicketsButton>
 
 const Schedule = ({ className }: { className?: string }) => (
   <div className={className}>
