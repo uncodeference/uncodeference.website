@@ -34,8 +34,4 @@ export const Section = styled(SectionComponent)`
     color: ${colors.black};
     text-transform: uppercase;
   }
-
-  a {
-    color: ${colors.black};
-  }
 `
