@@ -29,7 +29,7 @@ const SponsorsContainer = styled(Section)`
 const SponsorsSection = () => (
   <ColoredSection>
     <SponsorsContainer id="sponsors" title="Sponsors" >
-      <Title> - Main Sponsors</Title>
+      <Title>Main Sponsors</Title>
       <Text>
         <Link target="_blank" href="https://gronda.eu">Gronda: </Link>
         Organization
@@ -43,7 +43,7 @@ const SponsorsSection = () => (
       <br />
       <br />
 
-      <Title> - Who else is supporting us? <span role="img" aria-label="rocket">🚀</span></Title>
+      <Title>Who else is supporting us? <span role="img" aria-label="rocket">🚀</span></Title>
       <Text> <Link target="_blank" href="https://webundspeck.com/">Web&amp;Speck Meetup</Link></Text>
       <Text> <Link target="_blank" href="https://www.agent.sh/">Agent conf</Link></Text> <br />
 

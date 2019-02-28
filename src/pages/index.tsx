@@ -162,7 +162,7 @@ const IndexPage = () => (
       <PreviousEditionsSection />
       <FAQSection />
       <SponsorsSection />
-      <Contact />
+      {/*<Contact />*/}
     </Page>
   </IndexLayout>
 )
