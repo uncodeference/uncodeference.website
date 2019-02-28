@@ -2,7 +2,6 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { Section } from '../Section'
 import { colors } from '../../styles/variables'
-// import Text from '../../components/ui/Text';
 import { Link } from '../../components/ui/Links';
 
 const Title = styled.h4`
@@ -10,15 +9,12 @@ const Title = styled.h4`
   letter-spacing: 0.06em;
 `;
 
-
 const Text = styled.p`
   color: ${colors.white} !important;
 `;
 
-export const Spacer = () => (<span className="spacer">&nbsp;&middot;&nbsp;</span>);
-
 const ColoredSection = styled.div`
-  background: black;
+  background: ${colors.black};
   padding: 4rem;
 `
 

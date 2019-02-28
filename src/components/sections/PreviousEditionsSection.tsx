@@ -4,10 +4,13 @@ import styled from '@emotion/styled'
 import { colors } from '../../styles/variables'
 import { Section } from '../Section'
 
+const Title = styled.h3`
+  color: ${colors.white} !important;
+  letter-spacing: 0.06em;
+`;
+
 const ColoredSection = styled.div`
-  background-image: url(${background});
-  background-size: cover;
-  background-position-y: center;
+  background: ${colors.black};
   padding: 4rem;
 `
 
@@ -22,7 +25,12 @@ const PreviousEditionsContainer = styled(Section)`
 
 const PreviousEditionsSection = () => (
   <ColoredSection>
-    <PreviousEditionsContainer id="last-year" title="Last Year" />
+    <PreviousEditionsContainer id="last-year" title="Last Year" >
+      <Title>45 Developers</Title>
+      <Title>8 Countries</Title>
+      <Title>6 Rooms</Title>
+      <Title>25 Talks</Title>
+    </PreviousEditionsContainer>
   </ColoredSection>
 )
 
