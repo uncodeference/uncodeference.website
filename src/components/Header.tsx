@@ -12,20 +12,13 @@ const StyledHeader = styled.header`
 `
 
 const Navbar = styled.nav`
-  list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
-  > * {
-    margin-left: 1em;
-    margin-right: 1em;
-    &:first-of-type {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
+  > *:last-child {
+      margin-right: 1em;
   }
   a {
     border-bottom-style: none;
@@ -36,7 +29,6 @@ const StyledLogo = styled(Link)`
   font-size: 1.5rem;
   > img {
     height: 4rem;
-    margin-top: 0.5rem; // TODO: make this better
   }
 
   &:hover {
@@ -45,7 +37,15 @@ const StyledLogo = styled(Link)`
 `
 const NavTextItem = styled(Link)`
   color: ${colors.brand};
-  font-size: 1.3rem;
+  @media (min-width: 601px) {
+    font-size: x-large;
+        }
+  @media (max-width: 600px) {
+    font-size: small;
+        }
+  font-weight: 600;
+  padding-top: 1em;
+  padding-bottom: 1em;
   font-weight: 600;
 
   &:hover {
@@ -53,16 +53,12 @@ const NavTextItem = styled(Link)`
   }
 `
 const LogoEntry: React.FunctionComponent<{ icon: string; to: string }> = ({ icon, to }) => (
-  <li>
     <StyledLogo to={to}>
       <img src={icon} />
     </StyledLogo>
-  </li>
 )
 const NavTextEntry: React.FunctionComponent<{ label: string; to: string }> = ({ label, to }) => (
-  <li>
     <NavTextItem to={to}>{label}</NavTextItem>
-  </li>
 )
 
 interface HeaderProps {}
