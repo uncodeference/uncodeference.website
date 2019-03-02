@@ -6,12 +6,18 @@ import { Link as L } from '../../components/ui/Links';
 
 const ColoredSection = styled.div`
   background-image: linear-gradient(270deg, ${colors.brand}, hsla(173, 45%, 62%, 0.9));
-  padding: 4rem;
+  @media (max-width:480px){
+      padding: 1rem;
+  }
+  @media (min-width:481px){
+      padding: 2rem;
+    }
+  @media (min-width:800px){
+      padding: 4rem;
+    }
 `
 
 const FAQContainer = styled(Section)`
-  display: flex;
-  flex-direction: row;
 `
 
 const Title = styled.h4`
