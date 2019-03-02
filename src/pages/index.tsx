@@ -19,7 +19,6 @@ const MainSection = styled.div`
   background-size: cover;
   background-position-y: center;
   padding-top: 1rem;
-  padding-bottom: 2rem;
 `
 
 const InfoBox = styled.div`
@@ -28,9 +27,19 @@ const InfoBox = styled.div`
   border: 4px solid ${colors.brand};
   display: flex;
   flex-direction: column;
-  max-width: 44em;
-  margin: 7em 1em;
-  padding: 2em;
+  @media (max-width:640px) {
+    max-width: 100%;
+    margin: 0em;
+    padding: 1em;
+  }
+  @media (min-width:641px) {
+    max-width: 75%;
+    margin-top: 5em;
+    margin-bottom: 10em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 2em;
+  }
   align-items: center;
   font-family: ${fonts.monospace};
   align-self: center;
@@ -45,7 +54,15 @@ const InfoBox = styled.div`
 
 const Title = styled.h1`
   text-transform: uppercase;
-  font-size: 3rem;
+  @media (max-width:680px) {
+    font-size: 1.6em;
+  }
+  @media (min-width:681px) {
+    font-size: 2.2rem;
+  }
+  @media (min-width:880px) {
+    font-size: 3rem;
+  }
   margin-bottom: 0;
 `
 
@@ -112,15 +129,23 @@ const ListSchedule = styled(Schedule)`
 const StyledSchedule = styled(Schedule)`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  @media (max-width:600px) {
+    flex-direction: column;
+    > div {
+      margin-bottom: 2em;
+    }
+    > div:last-child {
+      margin-bottom: 0em;
+    }
+  }
+  @media (min-width:601px) {
+    flex-direction: row;
+  }
   justify-content: space-around;
   > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    > span {
-      margin-bottom: 0.3rem;
-    }
     > :nth-child(2) {
       font-size: 1.3rem;
       font-weight: bolder;
@@ -128,20 +153,40 @@ const StyledSchedule = styled(Schedule)`
   }
 `
 
+const Location = styled.p`
+  margin-top: 1em;
+  @media (max-width:640px) {
+    font-size: 1em;
+  }
+  @media (min-width:641px) {
+    font-size: 1.5rem;
+  }
+`
+
+const Description = styled.p`
+  text-align: center;
+  @media (min-width: 360px) {
+      font-size: calc(16px + 6 * ((100vw - 360px) / 640));
+  }
+  @media  (min-width: 1000px) {
+      font-size: 22px;
+  }
+`
+
 const MainInfo: React.FunctionComponent = () => (
   <InfoBox>
     <Title>uncodeference.io '19</Title>
-    <h3>
+    <Location>
       09.-11. May 2019 &middot;{' '}
       <a href="https://www.google.com/maps/place/Werkstätte+Wattens/@47.287262,11.5905719,17z/data=!3m1!4b1!4m5!3m4!1s0x479d6467027ebc8d:0x97e24643b15d2bec!8m2!3d47.2872584!4d11.5927606">
         Wattens, AT
       </a>
-    </h3>
+    </Location>
     <StyledSpacer />
-    <p>
+    <Description>
       The software engineering <a href="http://unconference.net/unconferencing-how-to-prepare-to-attend-an-unconference/">unconference</a>{' '}
       in the heart of Tyrol (Austria)
-    </p>
+    </Description>
     <StyledSpacer />
     <StyledSchedule />
     <StyledSpacer />
