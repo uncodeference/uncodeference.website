@@ -5,29 +5,18 @@ import { Section } from '../Section'
 
 const ColoredSection = styled.div`
   background-image: linear-gradient(90deg, ${colors.brand}, hsla(173, 45%, 62%, 0.9));
-  padding: 4rem;
+  @media (max-width:480px){
+      padding: 1rem;
+  }
+  @media (min-width:481px){
+      padding: 2rem;
+    }
+  @media (min-width:800px){
+      padding: 4rem;
+    }
 `
 
 const AttendContainer = styled(Section)`
-  display: flex;
-  flex-direction: row;
-
-  h2 {
-    color: ${colors.black};
-    margin: 0 5rem 0 0;
-    font-weight: bold;
-    text-transform: uppercase;
-    transform: rotate(180deg);
-    text-align: center;
-    writing-mode: vertical-lr;
-    font-size: 3rem;
-  }
-
-  h3 {
-    color: ${colors.black};
-    text-transform: uppercase;
-  }
-
   a {
     color: ${colors.black};
   }

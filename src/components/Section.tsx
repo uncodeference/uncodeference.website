@@ -17,17 +17,36 @@ const SectionComponent: React.SFC<SectionProps> = ({ id, className, title, child
 
 export const Section = styled(SectionComponent)`
   display: flex;
-  flex-direction: row;
+  @media (max-width:800px){
+    flex-direction: column;
+    h2 {
+      transform: none;
+      writing-mode: initial;
+      font-size: 2rem;
+      margin: 0;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+  @media (min-width:801px){
+    flex-direction: row;
+    h2 {
+      transform: rotate(180deg);
+      writing-mode: vertical-lr;
+      font-size: 3rem;
+      margin: 0 5rem 0 0;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
 
   h2 {
     color: ${colors.black};
-    margin: 0 5rem 0 0;
     font-weight: bold;
     text-transform: uppercase;
-    transform: rotate(180deg);
     text-align: center;
-    writing-mode: vertical-lr;
-    font-size: 3rem;
   }
 
   h3 {
