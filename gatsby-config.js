@@ -20,6 +20,21 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `un{code}ference.io '19`,
+        short_name: `uncodeference`,
+        start_url: `/`,
+        background_color: `#000000`,
+        theme_color: `#73CA88`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `src/assets/logo.inverted.png`, // This path is relative to the root of the site.
+        include_favicon: true // Include favicon
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [

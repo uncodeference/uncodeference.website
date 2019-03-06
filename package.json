@@ -1,11 +1,13 @@
 {
-  "name": "gatsby-starter-typescript-plus",
-  "description": "A starter kit for TypeScript-based Gatsby projects with sensible defaults.",
-  "version": "1.0.0",
-  "private": true,
-  "author": "Resi Respati <resir014@gmail.com>",
+  "name": "uncodeference.website",
+  "description": "The website for the un{code}ference.io unconference, based on gatsby-starter-typescript-plus.",
+  "version": "1.1.0",
+  "private": false,
+  "author": "Bernhard Mayr <bernhard@mayr.com>, Juan Luis Vicci <juan@gronda.eu>",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "uncodeference",
+    "unconference"
   ],
   "license": "MIT",
   "main": "n/a",
@@ -32,6 +34,7 @@
     "gatsby-image": "^2.0.5",
     "gatsby-plugin-canonical-urls": "^2.0.5",
     "gatsby-plugin-emotion": "^4.0.1",
+    "gatsby-plugin-manifest": "^2.0.22",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "^2.0.5",
     "gatsby-plugin-typescript": "^2.0.0",
