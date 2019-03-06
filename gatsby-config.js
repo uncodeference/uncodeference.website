@@ -3,13 +3,14 @@
 module.exports = {
   siteMetadata: {
     title: "un{code}ference.io '19",
-    description: 'The software engineering unconferencein the heart of Tyrol (Austria)',
+    description: 'The software engineering unconference in the heart of Tyrol (Austria)',
     siteUrl: 'https://uncodeference.io',
     author: {
       name: 'Bernhard Mayr',
       url: 'https://twitter.com/bemayr',
       email: 'bernhard@mayr.io'
-    }
+    },
+    twitter: `@uncodeference`
   },
   plugins: [
     {
@@ -29,7 +30,7 @@ module.exports = {
         theme_color: `#73CA88`,
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-        display: `standalone`,
+        display: `minimal-ui`,
         icon: `src/assets/logo.inverted.png`, // This path is relative to the root of the site.
         include_favicon: true // Include favicon
       }
