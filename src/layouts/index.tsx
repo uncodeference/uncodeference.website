@@ -49,7 +49,7 @@ const IndexLayout: React.SFC = ({ children }) => (
           <meta name="twitter:site" content={twitter} />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
-          <meta name="twitter:image" content={`${siteUrl}/large-card.social-media.png`} />
+          <meta name="twitter:image" content={`${siteUrl}/large-card.social-media.jpg`} />
         </Helmet>
         <LayoutMain>{children}</LayoutMain>
       </LayoutRoot>
