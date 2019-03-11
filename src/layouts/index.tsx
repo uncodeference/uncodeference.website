@@ -43,13 +43,13 @@ const IndexLayout: React.SFC = ({ children }) => (
           <meta property="og:locale" content="en" />
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
-          <meta property="og:image" content={`{siteUrl}/logo.social-media.png`} />
+          <meta property="og:image" content={`${siteUrl}/logo.social-media.png`} />
 
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content={twitter} />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
-          <meta name="twitter:image" content={`{siteUrl}/logo.social-media.png`} />
+          <meta name="twitter:image" content={`${siteUrl}/logo.social-media.png`} />
         </Helmet>
         <LayoutMain>{children}</LayoutMain>
       </LayoutRoot>
