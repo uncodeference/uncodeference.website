@@ -3,7 +3,7 @@
 module.exports = {
   siteMetadata: {
     title: "un{code}ference.io '19",
-    description: 'The software engineering unconference in the heart of Tyrol (Austria)',
+    description: 'The software engineering unconference on May 10th, in the heart of Tyrol (Austria)',
     siteUrl: 'https://uncodeference.io',
     author: {
       name: 'Bernhard Mayr',
