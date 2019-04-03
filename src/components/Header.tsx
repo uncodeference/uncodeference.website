@@ -18,7 +18,7 @@ const Navbar = styled.nav`
   align-items: center;
   height: 100%;
   > *:last-child {
-      margin-right: 1em;
+    margin-right: 1em;
   }
   a {
     border-bottom-style: none;
@@ -37,29 +37,28 @@ const StyledLogo = styled(Link)`
 `
 const NavTextItem = styled(Link)`
   color: ${colors.brand};
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.5);
   @media (min-width: 601px) {
     font-size: x-large;
-        }
+  }
   @media (max-width: 600px) {
     font-size: small;
-        }
+  }
   font-weight: 600;
   padding-top: 1em;
   padding-bottom: 1em;
   font-weight: 600;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.8;
   }
 `
 const LogoEntry: React.FunctionComponent<{ icon: string; to: string }> = ({ icon, to }) => (
-    <StyledLogo to={to}>
-      <img src={icon} />
-    </StyledLogo>
+  <StyledLogo to={to}>
+    <img src={icon} />
+  </StyledLogo>
 )
-const NavTextEntry: React.FunctionComponent<{ label: string; to: string }> = ({ label, to }) => (
-    <NavTextItem to={to}>{label}</NavTextItem>
-)
+const NavTextEntry: React.FunctionComponent<{ label: string; to: string }> = ({ label, to }) => <NavTextItem to={to}>{label}</NavTextItem>
 
 interface HeaderProps {}
 
