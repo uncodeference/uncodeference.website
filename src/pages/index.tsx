@@ -12,7 +12,6 @@ import AttendSection from '../components/sections/AttendSection'
 import PreviousEditionsSection from '../components/sections/PreviousEditionsSection'
 import FAQSection from '../components/sections/FAQSection'
 import SponsorsSection from '../components/sections/SponsorsSection'
-import Contact from '../components/sections/Contact'
 
 const MainSection = styled.div`
   background-image: url(${background});
@@ -27,12 +26,12 @@ const InfoBox = styled.div`
   border: 4px solid ${colors.brand};
   display: flex;
   flex-direction: column;
-  @media (max-width:640px) {
+  @media (max-width: 640px) {
     max-width: 100%;
     margin: 0em;
     padding: 1em;
   }
-  @media (min-width:641px) {
+  @media (min-width: 641px) {
     max-width: 75%;
     margin-top: 5em;
     margin-bottom: 10em;
@@ -54,13 +53,13 @@ const InfoBox = styled.div`
 
 const Title = styled.h1`
   text-transform: uppercase;
-  @media (max-width:680px) {
+  @media (max-width: 680px) {
     font-size: 1.6em;
   }
-  @media (min-width:681px) {
+  @media (min-width: 681px) {
     font-size: 2.2rem;
   }
-  @media (min-width:880px) {
+  @media (min-width: 880px) {
     font-size: 3rem;
   }
   margin-bottom: 0;
@@ -129,7 +128,7 @@ const ListSchedule = styled(Schedule)`
 const StyledSchedule = styled(Schedule)`
   width: 100%;
   display: flex;
-  @media (max-width:600px) {
+  @media (max-width: 600px) {
     flex-direction: column;
     > div {
       margin-bottom: 2em;
@@ -138,7 +137,7 @@ const StyledSchedule = styled(Schedule)`
       margin-bottom: 0em;
     }
   }
-  @media (min-width:601px) {
+  @media (min-width: 601px) {
     flex-direction: row;
   }
   justify-content: space-around;
@@ -155,10 +154,10 @@ const StyledSchedule = styled(Schedule)`
 
 const Location = styled.p`
   margin-top: 1em;
-  @media (max-width:640px) {
+  @media (max-width: 640px) {
     font-size: 1em;
   }
-  @media (min-width:641px) {
+  @media (min-width: 641px) {
     font-size: 1.5rem;
   }
 `
@@ -166,10 +165,10 @@ const Location = styled.p`
 const Description = styled.p`
   text-align: center;
   @media (min-width: 360px) {
-      font-size: calc(16px + 6 * ((100vw - 360px) / 640));
+    font-size: calc(16px + 6 * ((100vw - 360px) / 640));
   }
-  @media  (min-width: 1000px) {
-      font-size: 22px;
+  @media (min-width: 1000px) {
+    font-size: 22px;
   }
 `
 
@@ -177,7 +176,7 @@ const MainInfo: React.FunctionComponent = () => (
   <InfoBox>
     <Title>uncodeference.io '19</Title>
     <Location>
-      09.-11. May 2019 &middot;{' '}
+      May 10<sup>th</sup> 2019 &middot;{' '}
       <a href="https://www.google.com/maps/place/Werkstätte+Wattens/@47.287262,11.5905719,17z/data=!3m1!4b1!4m5!3m4!1s0x479d6467027ebc8d:0x97e24643b15d2bec!8m2!3d47.2872584!4d11.5927606">
         Wattens, AT
       </a>

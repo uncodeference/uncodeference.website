@@ -2,18 +2,20 @@ import * as React from 'react'
 import { colors } from '../../styles/variables'
 import styled from '@emotion/styled'
 import { Section } from '../Section'
+import { Link } from 'gatsby'
+import { lstat } from 'fs'
 
 const ColoredSection = styled.div`
   background-image: linear-gradient(90deg, ${colors.brand}, hsla(173, 45%, 62%, 0.9));
-  @media (max-width:480px){
-      padding: 1rem;
+  @media (max-width: 480px) {
+    padding: 1rem;
   }
-  @media (min-width:481px){
-      padding: 2rem;
-    }
-  @media (min-width:800px){
-      padding: 4rem;
-    }
+  @media (min-width: 481px) {
+    padding: 2rem;
+  }
+  @media (min-width: 800px) {
+    padding: 4rem;
+  }
 `
 
 const AttendContainer = styled(Section)`
@@ -28,51 +30,68 @@ const AttendSection = () => (
       <div>
         <section>
           <h3>The Conference</h3>
-          <div>
-            <p>The unconference* format creates space for peer-to-peer learning, collaboration and creativity.</p>
-            <p>
-              At the start, the whole group will gather together and be guided through creating an agenda using open space technology. The
-              exact process is not important to understand in advance – the process will become clear as it happens. The important part is
-              that all those gathered will have the opportunity to put conference sessions on the agenda. No session will be voted off or
-              ‘won’t happen’ for some other reason. All sessions are welcome!
-            </p>
-            <p>The sessions convened will range from the formal to the informal:</p>
+          <p>
+            The uncodeference is a place to learn, meet new friends, share ideas and have lots of fun. We wanna provide the best place for a
+            true&nbsp;
+            <Link to="#what-is-an-unconference">
+              <i>unconference</i>
+            </Link>
+            &nbsp;experience. We want to connect people and build a place where thoughts and experiences can be exchanged in the most
+            awesome way.
+          </p>
+          <p>
+            From our last year's experience this worked pretty well and this year we wanna bring this idea further. That's the reason why
+            the conference might seem as a 3-day event. We've got
             <ul>
               <li>
-                From the well thought out pre-prepared talk reflecting years of research and practice to the spur of the moment ‘new idea’
-                that would be fun to talk about.
+                the <b>un&lt;meet&gt;up</b> on Thursday the 9<sup>th</sup>
               </li>
-              <li>From the demonstration of a working tool to the whiteboarding of something completely new.</li>
+              <li>
+                the <b>un{'{code}'}ference</b> on Friday the 10<sup>th</sup>
+              </li>
+              <li>
+                and the <b>(un)hike</b> on Saturday the 11<sup>th</sup>.
+              </li>
             </ul>
-            <p>
-              Read more about it&nbsp;
-              <a target="_blank" href="http://unconference.net/unconferencing-how-to-prepare-to-attend-an-unconference/">
-                here
-              </a>
-              .
-            </p>
-          </div>
+          </p>
+          <p>
+            Just to make sure, the&nbsp;
+            <b>
+              main event takes place on Friday the 10<sup>th</sup>
+            </b>
+            &nbsp;and this is also the date a ticket is needed. The&nbsp;<b>un&lt;meet&gt;up</b>&nbsp;and the&nbsp;<b>(un)hike</b>&nbsp;are
+            satellite events for the community, we would be really happy if you join in, but it's completely up to you!
+          </p>
         </section>
         <section>
           <h3>The Venue</h3>
           <p>
             <a href="https://www.werkstaette-wattens.at/en" target="blank">
               Werkstätte Wattens
-            </a>{' '}
-            is an international business and creative centre for founders, startups, movers & shakers and service providers at various
-            stages of development. They focus on technology, innovation, and the creation of regional value and sustainable growth.
+            </a>
+            &nbsp;is an international business and creative centre for founders, startups, movers &amp; shakers and service providers at
+            various stages of development. They focus on technology, innovation, and the creation of regional value and sustainable growth.
           </p>
           <p />
-          <p>Weisstraße 9, 6112 Wattens, Austria</p>
+          <address>
+            Address:&nbsp;
+            <a href="https://www.openstreetmap.org/node/4774623335#map=18/47.28758/11.59321&layers=T" target="blank">
+              Weisstraße 9, 6112 Wattens, Austria
+            </a>
+          </address>
         </section>
         <section>
           <h3>The Meetup</h3>
           <p>
-            Follow the{' '}
+            Due to the great feedback of last year's uncodeference we decided to convert the formerly known ReactJS Tirol meetup into
+            the&nbsp;<b>un&lt;meet&gt;up</b>&nbsp;and broadened up it's topics to software engineering in general.
+            <br />
+            Because of it being grown out of the uncodeference we decided to host it this year alongside the uncodeference as a satellite
+            event. For more info and RSVP please visit&nbsp;
             <a href="https://github.com/uncodeference/unmeetup" target="blank">
-              link
-            </a>{' '}
-            for more info!
+              our GitHub repository
+            </a>
+            &nbsp; where everything is organized by the community! We are looking forward to see you there!
           </p>
         </section>
         <section>
@@ -83,10 +102,8 @@ const AttendSection = () => (
           <h3>Code of Conduct</h3>
           <p>
             All attendees, speakers, sponsors and volunteers at our conference are required to agree with the{' '}
-            <a href="http://confcodeofconduct.com/">
-              <b>Conference Code of Conduct</b>
-            </a>
-            . We expect cooperation from all participants to help ensure a safe environment for everybody.
+            <a href="http://confcodeofconduct.com/">Conference Code of Conduct</a>. We expect cooperation from all participants to help
+            ensure a safe environment for everybody.
           </p>
         </section>
       </div>
