@@ -119,11 +119,11 @@ const Schedule = ({ className }: { className?: string }) => (
 )
 
 // kept for emotionjs demo purpose
-const ListSchedule = styled(Schedule)`
-  div > span:after {
-    content: ': ';
-  }
-`
+// // const ListSchedule = styled(Schedule)`
+// //   div > span:after {
+// //     content: ': ';
+// //   }
+// // `
 
 const StyledSchedule = styled(Schedule)`
   width: 100%;

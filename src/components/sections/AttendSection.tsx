@@ -3,7 +3,6 @@ import { colors } from '../../styles/variables'
 import styled from '@emotion/styled'
 import { Section } from '../Section'
 import { Link } from 'gatsby'
-import { lstat } from 'fs'
 
 const ColoredSection = styled.div`
   background-image: linear-gradient(90deg, ${colors.brand}, hsla(173, 45%, 62%, 0.9));
