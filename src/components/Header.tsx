@@ -11,20 +11,6 @@ const StyledHeader = styled.header`
   width: 100%;
 `
 
-const Navbar = styled.nav`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  > *:last-child {
-    margin-right: 1em;
-  }
-  a {
-    border-bottom-style: none;
-  }
-`
-
 const StyledLogo = styled(Link)`
   font-size: 1.5rem;
   > img {
@@ -59,6 +45,23 @@ const LogoEntry: React.FunctionComponent<{ icon: string; to: string }> = ({ icon
   </StyledLogo>
 )
 const NavTextEntry: React.FunctionComponent<{ label: string; to: string }> = ({ label, to }) => <NavTextItem to={to}>{label}</NavTextItem>
+
+const Navbar = styled.nav`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  > *:last-child {
+    margin-right: 1em;
+  }
+  a {
+    border-bottom-style: none;
+  }
+  @media (max-width: 480px) {
+    display: none;
+  }
+`
 
 interface HeaderProps {}
 
