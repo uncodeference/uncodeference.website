@@ -12,9 +12,9 @@ export default function HTML(props) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-            console.log("trying to uninstall the service worker of the old website");
             if ('serviceWorker' in navigator) {
               navigator.serviceWorker.ready.then(registration => {
+                console.log("service worker of the old website detected, trying to uninstall");
                 registration.unregister();
                 console.log("service worker unregistered");
               });
