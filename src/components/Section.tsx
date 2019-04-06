@@ -17,7 +17,7 @@ const SectionComponent: React.SFC<SectionProps> = ({ id, className, title, child
 
 export const Section = styled(SectionComponent)`
   display: flex;
-  @media (max-width:800px){
+  @media (max-width: 800px) {
     flex-direction: column;
     h2 {
       transform: none;
@@ -29,7 +29,7 @@ export const Section = styled(SectionComponent)`
       font-size: 1.3rem;
     }
   }
-  @media (min-width:801px){
+  @media (min-width: 801px) {
     flex-direction: row;
     h2 {
       transform: rotate(180deg);

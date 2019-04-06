@@ -1,5 +1,4 @@
 import * as React from 'react'
-import background from '../../assets/last-year.jpg'
 import styled from '@emotion/styled'
 import { colors } from '../../styles/variables'
 import { Section } from '../Section'
