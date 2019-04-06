@@ -13,3 +13,10 @@ declare module '*.module.css' {
   const cssModule: CSSModule
   export = cssModule
 }
+
+// type shims for Images, JSON data and SVGs
+
+declare module '*.png'
+declare module '*.jpg'
+declare module '*.json'
+declare module '*.svg'
