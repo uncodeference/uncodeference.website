@@ -2,7 +2,7 @@ import * as React from 'react'
 import { colors } from '../../styles/variables'
 import styled from '@emotion/styled'
 import { Section } from '../Section'
-import { Link } from 'gatsby'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const ColoredSection = styled.div`
   background-image: linear-gradient(90deg, ${colors.brand}, hsla(173, 45%, 62%, 0.9));
@@ -32,27 +32,27 @@ const AttendSection = () => (
           <p>
             The uncodeference is a place to learn, meet new friends, share ideas and have lots of fun. We wanna provide the best place for a
             true&nbsp;
-            <Link to="#what-is-an-unconference">
+            <AnchorLink href="#what-is-an-unconference">
               <i>unconference</i>
-            </Link>
+            </AnchorLink>
             &nbsp;experience. We want to connect people and build a place where thoughts and experiences can be exchanged in the most
             awesome way.
           </p>
           <p>
             From our last year's experience this worked pretty well and this year we wanna bring this idea further. That's the reason why
             the conference might seem as a 3-day event. We've got
-            <ul>
-              <li>
-                the <b>un&lt;meet&gt;up</b> on Thursday the 9<sup>th</sup>
-              </li>
-              <li>
-                the <b>un{'{code}'}ference</b> on Friday the 10<sup>th</sup>
-              </li>
-              <li>
-                and the <b>(un)hike</b> on Saturday the 11<sup>th</sup>.
-              </li>
-            </ul>
           </p>
+          <ul>
+            <li>
+              the <b>un&lt;meet&gt;up</b> on Thursday the 9<sup>th</sup>
+            </li>
+            <li>
+              the <b>un{'{code}'}ference</b> on Friday the 10<sup>th</sup>
+            </li>
+            <li>
+              and the <b>(un)hike</b> on Saturday the 11<sup>th</sup>.
+            </li>
+          </ul>
           <p>
             Just to make sure, the&nbsp;
             <b>
@@ -79,7 +79,7 @@ const AttendSection = () => (
             </a>
           </address>
         </section>
-        <section>
+        <section id="unmeetup">
           <h3>The Meetup</h3>
           <p>
             Due to the great feedback of last year's uncodeference we decided to convert the formerly known ReactJS Tirol meetup into
@@ -93,7 +93,7 @@ const AttendSection = () => (
             &nbsp; where everything is organized by the community! We are looking forward to see you there!
           </p>
         </section>
-        <section>
+        <section id="unhiking">
           <h3>The Hike</h3>
           <p>To be announced!</p>
         </section>
