@@ -24,15 +24,15 @@ const IndexLayout: React.SFC = ({ children }) => (
     `}
     render={({
       site: {
-        siteMetadata: { title, description, siteUrl, twitter }
-      }
+        siteMetadata: { title, description, siteUrl, twitter },
+      },
     }) => (
       <LayoutRoot>
         <Helmet
           title={title}
           meta={[
             { name: 'description', content: description },
-            { name: 'keywords', content: 'uncodeference, unconference, wattens, werkstätte, conference, software engineering' }
+            { name: 'keywords', content: 'uncodeference, unconference, wattens, werkstätte, conference, software engineering' },
           ]}
         >
           <html lang="en" />

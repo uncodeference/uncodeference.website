@@ -9,23 +9,23 @@ export const getEmSize = (size: number) => size / dimensions.fontSize.regular
 export const scale = (minimum: number, anchor: number, growth: number) => `calc(${minimum}em + ${anchor}vmin + ${growth}vw)`
 
 export const userSelect = (value: UserSelectProperty | UserSelectProperty[]): CSSPropertiesWithMultiValues => ({
-  userSelect: value
+  userSelect: value,
 })
 
 export const textTransform = (value: TextTransformProperty | TextTransformProperty[]): CSSPropertiesWithMultiValues => ({
-  textTransform: value
+  textTransform: value,
 })
 
 export const fontSize = (value: FontSizeProperty<TLength> | FontSizeProperty<TLength>[]): CSSPropertiesWithMultiValues => ({
-  fontSize: value
+  fontSize: value,
 })
 
 export const marginX = (margin: MarginProperty<TLength> | MarginProperty<TLength>[]): CSSPropertiesWithMultiValues => ({
   marginLeft: margin,
-  marginRight: margin
+  marginRight: margin,
 })
 
 export const marginY = (margin: MarginProperty<TLength> | MarginProperty<TLength>[]): CSSPropertiesWithMultiValues => ({
   marginTop: margin,
-  marginBottom: margin
+  marginBottom: margin,
 })

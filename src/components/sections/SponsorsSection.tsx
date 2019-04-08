@@ -31,7 +31,7 @@ const SponsorsContainer = styled(Section)`
 `
 
 const Sponsor = styled(
-  ({ className, name, type, image, url }: { className?: string; name: string; type: string; image: string; url: string }) => (
+  ({ className, name, image, url }: { className?: string; name: string; type: string; image: string; url: string }) => (
     <a className={className} href={url}>
       <img src={image} alt={`Logo of ${name}`} />
     </a>

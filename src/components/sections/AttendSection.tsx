@@ -2,8 +2,7 @@ import * as React from 'react'
 import { colors } from '../../styles/variables'
 import styled from '@emotion/styled'
 import { Section } from '../Section'
-import { Link } from 'gatsby'
-import { lstat } from 'fs'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const ColoredSection = styled.div`
   background-image: linear-gradient(90deg, ${colors.brand}, hsla(173, 45%, 62%, 0.9));
@@ -32,9 +31,9 @@ const AttendSection = () => (
         <p>
           The uncodeference is a place to learn, meet new friends, share ideas and have lots of fun. We wanna provide the best place for a
           true&nbsp;
-          <Link to="#what-is-an-unconference">
+          <AnchorLink href="#what-is-an-unconference">
             <i>unconference</i>
-          </Link>
+          </AnchorLink>
           &nbsp;experience. We want to connect people and build a place where thoughts and experiences can be exchanged in the most awesome
           way.
         </p>
