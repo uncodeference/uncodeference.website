@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 
 import { colors } from '../styles/variables'
 import invertedLogo from '../assets/logo.inverted.png'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const StyledHeader = styled.header`
   color: ${transparentize(0.5, colors.white)};
@@ -35,7 +36,7 @@ const StyledLogo = styled(Link)`
     opacity: 0.7;
   }
 `
-const NavTextItem = styled(Link)`
+const NavTextItem = styled(AnchorLink)`
   color: ${colors.brand};
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.5);
   @media (min-width: 601px) {
@@ -58,7 +59,7 @@ const LogoEntry: React.FunctionComponent<{ icon: string; to: string }> = ({ icon
     <img src={icon} />
   </StyledLogo>
 )
-const NavTextEntry: React.FunctionComponent<{ label: string; to: string }> = ({ label, to }) => <NavTextItem to={to}>{label}</NavTextItem>
+const NavTextEntry: React.FunctionComponent<{ label: string; to: string }> = ({ label, to }) => <NavTextItem href={to}>{label}</NavTextItem>
 
 interface HeaderProps {}
 

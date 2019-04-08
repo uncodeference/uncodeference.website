@@ -7,11 +7,11 @@ import background from '../assets/background.jpg'
 import Header from '../components/Header'
 import Container from '../components/Container'
 import { colors, fonts } from '../styles/variables'
-import { Link } from 'gatsby'
 import AttendSection from '../components/sections/AttendSection'
 import PreviousEditionsSection from '../components/sections/PreviousEditionsSection'
 import FAQSection from '../components/sections/FAQSection'
 import SponsorsSection from '../components/sections/SponsorsSection'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const MainSection = styled.div`
   background-image: url(${background});
@@ -101,19 +101,19 @@ const Schedule = ({ className }: { className?: string }) => (
       <span>
         Thursday 9<sup>th</sup>
       </span>
-      <a href="#TODO">un&lt;meet&gt;up</a>
+      <AnchorLink href="#unmeetup">un&lt;meet&gt;up</AnchorLink>
     </div>
     <div>
       <span>
         Friday 10<sup>th</sup>
       </span>
-      <Link to="#attend">un&#123;code&#125;ference</Link>
+      <AnchorLink href="#attend">un&#123;code&#125;ference</AnchorLink>
     </div>
     <div>
       <span>
         Saturday 11<sup>th</sup>
       </span>
-      <Link to="#unhiking">(un)hiking</Link>
+      <AnchorLink href="#unhiking">(un)hiking</AnchorLink>
     </div>
   </div>
 )
@@ -145,7 +145,7 @@ const StyledSchedule = styled(Schedule)`
     display: flex;
     flex-direction: column;
     align-items: center;
-    > :nth-child(2) {
+    > a {
       font-size: 1.3rem;
       font-weight: bolder;
     }

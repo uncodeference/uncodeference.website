@@ -55,6 +55,7 @@
     "prism-themes": "^1.0.1",
     "prismjs": "^1.15.0",
     "react": "^16.5.2",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
     "typescript": "^3.0.3"
