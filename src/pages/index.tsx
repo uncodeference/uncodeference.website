@@ -12,7 +12,7 @@ import AttendSection from '../components/sections/AttendSection'
 import PreviousEditionsSection from '../components/sections/PreviousEditionsSection'
 import FAQSection from '../components/sections/FAQSection'
 import SponsorsSection from '../components/sections/SponsorsSection'
-import { scale, marginY, userSelect, textTransform, fontSize, scaleCustom, scaleEm, grow } from '../styles/mixins'
+import { scale, marginY, userSelect, textTransform, fontSize, scaleEm, grow } from '../styles/mixins'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const MainSection = styled.div`
