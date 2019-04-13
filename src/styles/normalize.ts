@@ -1,5 +1,5 @@
 import { dimensions, fonts, colors, breakpoints } from './variables'
-import { getEmSize } from './mixins'
+import { getEmSize, scaleCustom } from './mixins'
 
 export default `
   html {
@@ -86,6 +86,7 @@ export default `
 
   h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility;
+    line-height: 1.2;
   }
 
   h1 {
@@ -95,6 +96,8 @@ export default `
   p {
     margin-top: 0;
     margin-bottom: 1rem;
+    font-size: ${scaleCustom(0.9, 0, 0.25)};
+    line-height: calc(1.45em + .05vw)};
   }
 
   strong {

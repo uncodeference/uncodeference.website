@@ -6,6 +6,7 @@ import { Link } from 'gatsby'
 import { colors } from '../styles/variables'
 import invertedLogo from '../assets/logo.inverted.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { scaleEm, grow } from '../styles/mixins'
 
 const StyledHeader = styled.header`
   color: ${transparentize(0.5, colors.white)};
@@ -14,6 +15,7 @@ const StyledHeader = styled.header`
 
 const StyledLogo = styled(Link)`
   font-size: 1.5rem;
+  line-height: 0;
   > img {
     height: 4rem;
   }
@@ -25,15 +27,8 @@ const StyledLogo = styled(Link)`
 const NavTextItem = styled(AnchorLink)`
   color: ${colors.brand};
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.5);
-  @media (min-width: 601px) {
-    font-size: x-large;
-  }
-  @media (max-width: 600px) {
-    font-size: small;
-  }
+  font-size: ${scaleEm(0.8, grow.slow)};
   font-weight: 600;
-  padding-top: 1em;
-  padding-bottom: 1em;
   font-weight: 600;
 
   &:hover {

@@ -4,6 +4,7 @@ import Page from '../components/Page'
 import IndexLayout from '../layouts'
 import styled from '@emotion/styled'
 import background from '../assets/background.jpg'
+import logo from '../assets/logo.inverted.png'
 import Header from '../components/Header'
 import Container from '../components/Container'
 import { colors, fonts } from '../styles/variables'
@@ -11,14 +12,13 @@ import AttendSection from '../components/sections/AttendSection'
 import PreviousEditionsSection from '../components/sections/PreviousEditionsSection'
 import FAQSection from '../components/sections/FAQSection'
 import SponsorsSection from '../components/sections/SponsorsSection'
-import { scale, marginY, userSelect, textTransform, fontSize } from '../styles/mixins'
+import { scale, marginY, userSelect, textTransform, fontSize, scaleCustom, scaleEm, grow } from '../styles/mixins'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const MainSection = styled.div`
   background-image: url(${background});
   background-size: cover;
   background-position-y: center;
-  padding-top: 1rem;
 `
 
 const InfoBox = styled.div`
@@ -27,22 +27,16 @@ const InfoBox = styled.div`
   border: 4px solid ${colors.brand};
   display: flex;
   flex-direction: column;
-  @media (max-width: 640px) {
-    max-width: 100%;
-    margin: 1em;
-    padding: 1em;
-  }
-  @media (min-width: 641px) {
-    max-width: 75%;
-    margin-top: 5em;
-    margin-bottom: 10em;
-    margin-left: 1em;
-    margin-right: 1em;
-    padding: 2em;
-  }
+  margin: 4vmin;
+  max-width: 45em;
+  padding: ${scaleEm(1.2, grow.slow)};
   align-items: center;
   font-family: ${fonts.monospace};
   align-self: center;
+  text-align: center;
+  @media (min-width: 481px) {
+    ${marginY(scaleEm(2, grow.fast))};
+  }
   > * {
     margin: 0;
   }
@@ -56,8 +50,8 @@ const Title = () => (
   <h1
     css={[
       textTransform('uppercase'), //
-      fontSize(scale(1, 0.6, 1.4)),
-      marginY(scale(0.2, 0, 0.4)),
+      fontSize(scaleEm(1.5)),
+      // { marginBottom: scaleEm(0.2, grow.slow) },
     ]}
   >
     uncodeference.io '19
@@ -67,7 +61,8 @@ const Title = () => (
 const Spacer = () => (
   <div
     css={[
-      marginY('1em'), //
+      fontSize('1em'), //
+      marginY('1em'),
       userSelect('none'),
     ]}
   >
@@ -82,6 +77,7 @@ const StyledTicketsButton = styled.a`
   color: ${colors.black};
   border-style: solid;
   user-select: none;
+  font-weight: bold;
 
   &:hover,
   &:focus {
@@ -175,9 +171,22 @@ const Description = styled.p`
   }
 `
 
+const Logo = () => (
+  <img
+    src={logo}
+    css={{
+      width: scale('xl', 'normal', 'growFast'),
+      ...marginY(scale('m')),
+      '@media (min-width: 481px)': {
+        display: 'none',
+      },
+    }}
+  />
+)
+
 const MainInfo: React.FunctionComponent = () => (
   <InfoBox>
-    {/* <Title>uncodeference.io '19</Title> */}
+    <Logo />
     <Title />
     <Location>
       May 10<sup>th</sup> 2019 &middot;{' '}
