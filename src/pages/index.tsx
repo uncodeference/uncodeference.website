@@ -4,6 +4,7 @@ import Page from '../components/Page'
 import IndexLayout from '../layouts'
 import styled from '@emotion/styled'
 import background from '../assets/background.jpg'
+import logo from '../assets/logo.inverted.png'
 import Header from '../components/Header'
 import Container from '../components/Container'
 import { colors, fonts } from '../styles/variables'
@@ -11,13 +12,13 @@ import AttendSection from '../components/sections/AttendSection'
 import PreviousEditionsSection from '../components/sections/PreviousEditionsSection'
 import FAQSection from '../components/sections/FAQSection'
 import SponsorsSection from '../components/sections/SponsorsSection'
+import { scale, marginY, userSelect, textTransform, fontSize, scaleEm, grow } from '../styles/mixins'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const MainSection = styled.div`
   background-image: url(${background});
   background-size: cover;
   background-position-y: center;
-  padding-top: 1rem;
 `
 
 const InfoBox = styled.div`
@@ -26,22 +27,16 @@ const InfoBox = styled.div`
   border: 4px solid ${colors.brand};
   display: flex;
   flex-direction: column;
-  @media (max-width: 640px) {
-    max-width: 100%;
-    margin: 0em;
-    padding: 1em;
-  }
-  @media (min-width: 641px) {
-    max-width: 75%;
-    margin-top: 5em;
-    margin-bottom: 10em;
-    margin-left: 1em;
-    margin-right: 1em;
-    padding: 2em;
-  }
+  margin: 4vmin;
+  max-width: 45em;
+  padding: ${scaleEm(1.2, grow.slow)};
   align-items: center;
   font-family: ${fonts.monospace};
   align-self: center;
+  text-align: center;
+  @media (min-width: 481px) {
+    ${marginY(scaleEm(2, grow.fast))};
+  }
   > * {
     margin: 0;
   }
@@ -51,34 +46,38 @@ const InfoBox = styled.div`
   }
 `
 
-const Title = styled.h1`
-  text-transform: uppercase;
-  @media (max-width: 680px) {
-    font-size: 1.6em;
-  }
-  @media (min-width: 681px) {
-    font-size: 2.2rem;
-  }
-  @media (min-width: 880px) {
-    font-size: 3rem;
-  }
-  margin-bottom: 0;
-`
+const Title = () => (
+  <h1
+    css={[
+      textTransform('uppercase'), //
+      fontSize(scaleEm(1.5)),
+      // { marginBottom: scaleEm(0.2, grow.slow) },
+    ]}
+  >
+    uncodeference.io '19
+  </h1>
+)
 
-const Spacer = ({ className }: { className?: string }) => <div className={className}>&#8226;&#8226;&#8226;</div>
-
-const StyledSpacer = styled(Spacer)`
-  margin: 1em 0 !important;
-  user-select: none;
-`
+const Spacer = () => (
+  <div
+    css={[
+      fontSize('1em'), //
+      marginY('1em'),
+      userSelect('none'),
+    ]}
+  >
+    &#8226;&#8226;&#8226;
+  </div>
+)
 
 const StyledTicketsButton = styled.a`
-  font-size: 1.8em;
-  padding: 0.2rem 1.8rem;
+  font-size: 1.5em;
+  padding: 0.4rem 2rem;
   background-color: ${colors.brand};
   color: ${colors.black};
   border-style: solid;
   user-select: none;
+  font-weight: bold;
 
   &:hover,
   &:focus {
@@ -172,23 +171,37 @@ const Description = styled.p`
   }
 `
 
+const Logo = () => (
+  <img
+    src={logo}
+    css={{
+      width: scale('xl', 'normal', 'growFast'),
+      ...marginY(scale('m')),
+      '@media (min-width: 481px)': {
+        display: 'none',
+      },
+    }}
+  />
+)
+
 const MainInfo: React.FunctionComponent = () => (
   <InfoBox>
-    <Title>uncodeference.io '19</Title>
+    <Logo />
+    <Title />
     <Location>
       May 10<sup>th</sup> 2019 &middot;{' '}
       <a href="https://www.google.com/maps/place/Werkstätte+Wattens/@47.287262,11.5905719,17z/data=!3m1!4b1!4m5!3m4!1s0x479d6467027ebc8d:0x97e24643b15d2bec!8m2!3d47.2872584!4d11.5927606">
         Wattens, AT
       </a>
     </Location>
-    <StyledSpacer />
+    <Spacer />
     <Description>
       The software engineering <a href="http://unconference.net/unconferencing-how-to-prepare-to-attend-an-unconference/">unconference</a>{' '}
       in the heart of Tyrol (Austria)
     </Description>
-    <StyledSpacer />
+    <Spacer />
     <StyledSchedule />
-    <StyledSpacer />
+    <Spacer />
     <TicketsButton />
   </InfoBox>
 )

@@ -1,5 +1,5 @@
 import { dimensions, fonts, colors, breakpoints } from './variables'
-import { getEmSize } from './mixins'
+import { getEmSize, scaleCustom } from './mixins'
 
 export default `
   html {
@@ -85,34 +85,19 @@ export default `
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 1.414rem;
-    margin-bottom: .5rem;
-    // color: ${colors.black};
-    font-weight: 600;
-    line-height: ${dimensions.lineHeight.heading};
     text-rendering: optimizeLegibility;
+    line-height: 1.2;
   }
 
   h1 {
-    margin-top: 0;
-    font-size: ${dimensions.headingSizes.h1}rem;
-  }
-
-  h2 {
-    font-size: ${dimensions.headingSizes.h2}rem;
-  }
-
-  h3 {
-    font-size: ${dimensions.headingSizes.h3}rem;
-  }
-
-  h4, h5, h6 {
-    font-size: ${dimensions.headingSizes.h4}rem;
+    font-size: calc(1.1em + 0.6vmin + 1.4vw);
   }
 
   p {
     margin-top: 0;
     margin-bottom: 1rem;
+    font-size: ${scaleCustom(0.9, 0, 0.25)};
+    line-height: calc(1.45em + .05vw)};
   }
 
   strong {
