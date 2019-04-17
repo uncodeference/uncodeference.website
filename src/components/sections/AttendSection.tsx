@@ -80,7 +80,7 @@ const AttendSection = () => (
           </a>
         </address>
       </section>
-      <section>
+      <section id="unmeetup">
         <h3>The Meetup</h3>
         <p>
           Due to the great feedback of last year's uncodeference we decided to convert the formerly known ReactJS Tirol meetup into
@@ -94,9 +94,11 @@ const AttendSection = () => (
           &nbsp; where everything is organized by the community! We are looking forward to see you there!
         </p>
       </section>
-      <section>
-        <h3>The Hike</h3>
-        <p>To be announced!</p>
+      <section id="unhiking">
+        <h3>The (Un)Hike</h3>
+        <p>
+          We are currently <b>test-hiking</b>, just a few more days and we will present the route(s)!
+        </p>
       </section>
       <section>
         <h3>Code of Conduct</h3>

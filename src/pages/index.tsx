@@ -50,8 +50,7 @@ const Title = () => (
   <h1
     css={[
       textTransform('uppercase'), //
-      fontSize(scaleEm(1.5)),
-      // { marginBottom: scaleEm(0.2, grow.slow) },
+      fontSize(scaleEm(1.5, grow.slow)),
     ]}
   >
     uncodeference.io '19
