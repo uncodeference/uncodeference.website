@@ -30,10 +30,10 @@ const PreviousEditionsContainer = styled(Section)`
 const PreviousEditionsSection = () => (
   <ColoredSection>
     <PreviousEditionsContainer id="last-year" title="Last Year">
-      <Title>45 Developers</Title>
+      <Title>60 Developers</Title>
       <Title>8 Countries</Title>
       <Title>6 Rooms</Title>
-      <Title>25 Talks</Title>
+      <Title>40 Talks</Title>
     </PreviousEditionsContainer>
   </ColoredSection>
 )

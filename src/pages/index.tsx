@@ -53,7 +53,7 @@ const Title = () => (
       fontSize(scaleEm(1.5, grow.slow)),
     ]}
   >
-    uncodeference.io '19
+    uncodeference.io '20
   </h1>
 )
 
@@ -91,26 +91,20 @@ const CenteredContainer = styled(Container)`
   flex-direction: column;
 `
 
-const TicketsButton = () => <StyledTicketsButton href="https://ti.to/uncodeference/2019">Tickets</StyledTicketsButton>
+const TicketsButton = () => <StyledTicketsButton href="https://ti.to/uncodeference/2020">Tickets</StyledTicketsButton>
 
 const Schedule = ({ className }: { className?: string }) => (
   <div className={className}>
     <div>
-      <span>
-        Thursday 9<sup>th</sup>
-      </span>
+      <span>Thursday</span>
       <AnchorLink href="#unmeetup">un&lt;meet&gt;up</AnchorLink>
     </div>
     <div>
-      <span>
-        Friday 10<sup>th</sup>
-      </span>
+      <span>Friday</span>
       <AnchorLink href="#attend">un&#123;code&#125;ference</AnchorLink>
     </div>
     <div>
-      <span>
-        Saturday 11<sup>th</sup>
-      </span>
+      <span>Saturday</span>
       <AnchorLink href="#unhiking">(un)hiking</AnchorLink>
     </div>
   </div>
@@ -188,7 +182,7 @@ const MainInfo: React.FunctionComponent = () => (
     <Logo />
     <Title />
     <Location>
-      May 10<sup>th</sup> 2019 &middot;{' '}
+      May 2020 &middot;{' '}
       <a href="https://www.google.com/maps/place/Werkstätte+Wattens/@47.287262,11.5905719,17z/data=!3m1!4b1!4m5!3m4!1s0x479d6467027ebc8d:0x97e24643b15d2bec!8m2!3d47.2872584!4d11.5927606">
         Wattens, AT
       </a>

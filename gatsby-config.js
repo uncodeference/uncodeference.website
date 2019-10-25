@@ -2,23 +2,23 @@
 
 module.exports = {
   siteMetadata: {
-    title: "un{code}ference.io '19",
+    title: "un{code}ference.io '20",
     description: 'The software engineering unconference on May 10th, in the heart of Tyrol (Austria)',
     siteUrl: 'https://uncodeference.io',
     author: {
       name: 'Bernhard Mayr',
       url: 'https://twitter.com/bemayr',
-      email: 'bernhard@mayr.io'
+      email: 'bernhard@mayr.io',
     },
-    twitter: `@uncodeference`
+    twitter: `@uncodeference`,
   },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
-        path: `${__dirname}/src/content`
-      }
+        path: `${__dirname}/src/content`,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -32,8 +32,8 @@ module.exports = {
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `minimal-ui`,
         icon: `src/assets/logo.inverted.png`, // This path is relative to the root of the site.
-        include_favicon: true // Include favicon
-      }
+        include_favicon: true, // Include favicon
+      },
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -42,8 +42,8 @@ module.exports = {
           {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              wrapperStyle: 'margin-bottom: 1rem'
-            }
+              wrapperStyle: 'margin-bottom: 1rem',
+            },
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
@@ -53,23 +53,23 @@ module.exports = {
             options: {
               maxWidth: 1140,
               quality: 90,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
     },
     'gatsby-transformer-json',
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://uncodeference.io'
-      }
+        siteUrl: 'https://uncodeference.io',
+      },
     },
     'gatsby-plugin-emotion',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
-  ]
+    'gatsby-plugin-react-helmet',
+  ],
 }
