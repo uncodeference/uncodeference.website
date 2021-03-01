@@ -53,7 +53,7 @@
     "normalize.css": "^8.0.0",
     "polished": "^3.2.0",
     "prism-themes": "^1.1.0",
-    "prismjs": "^1.16.0",
+    "prismjs": "^1.23.0",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
